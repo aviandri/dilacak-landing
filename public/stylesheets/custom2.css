@@ -31,7 +31,7 @@ h1, h2, h3, h4{
 
 .wrap{
 	display:block;position:relative;
-	min-height: 100%;
+	min-height: 700px;
 }
 
 .wrap.active{
@@ -650,6 +650,26 @@ nav.active{
 .pure-form.register-form button{
 	margin-top: 20px;
 	text-align: center;
+}
+
+.content-text{
+	color: #fff;
+	padding-top: 15px;
+}
+
+.content-text h2{
+	color: #fff;
+	font-size: 1.5em;	
+	line-height: 1em;
+}
+
+.content-text span{
+	font-size: 1.2em;	
+	line-height: 1.5em;
+}
+
+.content-image.right img{
+	float: right;
 }
 
 .image-container img:hover{
