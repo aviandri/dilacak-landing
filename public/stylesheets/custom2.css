@@ -7,11 +7,15 @@ html, body{
 	background-color: #fafafa;	
 	margin:0;
 	color: #666;
+	width: auto !important;
+  	overflow-x: hidden !important;
 }
 
 body{
 	min-width: 50%;
 	height:100%;
+	width: auto !important;
+  	overflow-x: hidden !important;
 }
 
 span{
@@ -795,8 +799,7 @@ strong{
   	}
 
   	.quote-section .section-text{
-  		left: 50%;
-  		margin: 0 0 0 10%;
+
   	}
 
   	.hidden-mobile{
@@ -941,6 +944,7 @@ strong{
 
 	.section-text{
 		text-align: center;
+		width: 420px !important;
 	}
 
 	.nav-toggle{
@@ -955,6 +959,9 @@ strong{
 
 
 @media (max-width: 400px){
+	.banner-text span{
+		margin-left: 40px;
+	}
 	.image-container{
 		margin: 0 8%;
 	}
@@ -1014,6 +1021,53 @@ strong{
   		margin: 0 0 0 -620px;
 	}
 
+@media (max-width: 380px){
+	body{
+		width: 380px;
+	}
+	.section-text{
+		text-align: center;
+		width: 320px !important;
+	}
+
+	div.content.container{
+		width: 350px !important;
+	}
+
+	.container{
+		width: 380px !important;
+	}
+
+	#banner-action{
+		width: 250px;
+	}
+
+	.nav-toggle{
+		float: none;
+		margin: -5px 0 0 0;
+	}
+
+	.banner-text h1{
+		margin-left: 30px;
+	}
+
+	.full-container img{
+		margin-left: 20px;
+	}
+
+	.section-text{
+		padding-left: 0px;
+	}
+	.action{
+		margin-left: 30%;
+	}
+
+	.pricing .plan{
+		width: inherit;
+		left: 50%;
+		margin: 0 0 0 60px;
+	}
+}
 
 
 
