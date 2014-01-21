@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="public/stylesheets/skeleton.css">
 	<link rel="stylesheet" href="public/stylesheets/layout.css">
 	<link rel="stylesheet" href="public/stylesheets/pure.css">
+	<link rel="stylesheet" href="public/stylesheets/responsive-nav.css">
 	<link rel="stylesheet" href="public/stylesheets/custom2.css">
 
 	<!--[if lt IE 9]>
@@ -52,6 +53,7 @@
 
 	<link rel="stylesheet" href="public/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<script type="text/javascript" src="public/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<script src="public/javascript/responsive-nav.min.js"></script>
 
 </head>
 <body>
@@ -62,7 +64,10 @@
 					<div class="logo">
 						<img src="public/images/logo.png"/>
 					</div>
-					<div class="nav-menu right">
+					<div class="nav-toggle">
+							<a href="#nav">Menu</a>		
+						</div>
+					<div id="foo" class="nav-menu right">
 						<ul>
 							<li><a href="index2.html">Home</a></li>
 							<li><a href="#features">Features</a></li>
@@ -87,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="container">
+			<div class="container pricing-container">
 				<div class="sixteen columns">
 					<div class="container">
 						<div class="pricing">						
@@ -171,7 +176,9 @@
 
 <!-- End Document
 	================================================== -->
-</body>
+	<script>
+  	var navigation = responsiveNav("foo", {customToggle: ".nav-toggle"});
+	</script>
 </body>
 </html>
 
@@ -191,3 +198,4 @@
 	});
 });
 </script>
+

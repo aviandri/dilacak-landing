@@ -21,8 +21,11 @@
 	<link rel="stylesheet" href="public/stylesheets/base.css">
 	<link rel="stylesheet" href="public/stylesheets/skeleton.css">
 	<link rel="stylesheet" href="public/stylesheets/layout.css">
+
+	<link rel="stylesheet" href="public/stylesheets/responsive-nav.css">
 	<link rel="stylesheet" href="public/stylesheets/custom2.css">
 	<link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+	
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,6 +40,7 @@
 
 	<script src="public/javascript/jquery-1.10.1.js"></script>
 	<script src="public/javascript/waypoint/waypoints.min.js"></script>
+	<script src="public/javascript/responsive-nav.min.js"></script>
 
 </head>
 <body>
@@ -48,11 +52,14 @@
 	<div class="wrap">
 		<div class="header">
 			<nav class="">
-				<div class="nav container clearfix">
-					<div class="logo">
-						<img src="public/images/logo.png"/>
-					</div>
-					<div class="nav-menu right">
+				<div class="nav container clearfix full-container">
+						<div class="logo">
+							<img src="public/images/logo.png"/>
+						</div>		
+						<div class="nav-toggle">
+							<a href="#nav">Menu</a>		
+						</div>
+					<div id="foo" class="nav-menu right">
 						<ul>
 							<li class="current"><a href="index2.html">Home</a></li>
 							<li><a href="#features">Features</a></li>
@@ -61,18 +68,21 @@
 							<li><a href="how_it_works.html">Cara Kerja</a></li>
 							<li><a href="">About Us</a></li>
 						</ul>
-					</div>				
+					</div>		
 				</div>
 			</nav>
-			<div class="header-content container"> 
-				<div class="banner-text">
+
+			<div class="header-content container full-container"> 
+				<div class="banner-text eleven columns">
+					<span class="subheading">Fleet management & GPS tracking</span>		
 					<h1>Lacak dengan mudah</h1>				
 					<span class="subheading">Tingkatkan efesiensi & keamanan kendaraan anda</span>		
 				</div>
+				<a href="" class="action two columns banner-action" id="banner-action">Mulai Lacak</a>
 			</div>
 		</div>
 
-		<div class="container mentions" id="end-point">
+		<div class="container mentions full-container" id="end-point">
 				<h2>Liputan kami</h2>
 				<div class="four columns">
 					<img src="public/images/sparxup-2012-logo.png">
@@ -98,7 +108,7 @@
 		</div>
 		<div class="content container">
 				<div class="features">
-					<div class="section">
+					<div class="section first">
 						<div class="container">
 							<div class="eight columns">
 								<div class="image-container">
@@ -115,11 +125,16 @@
 
 					<div class="section">
 						<div class="container">
+							<div class="eight columns hidden-desktop">
+								<div class="image-container">
+									<img src="public/images/time.png">
+								</div>							
+							</div>
 							<div class="eight columns section-text">
 								<h3>Real Time Tracking</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 							</div>
-							<div class="eight columns">
+							<div class="eight columns hidden-mobile">
 								<div class="right image-container">
 									<img src="public/images/time.png">
 								</div>							
@@ -142,11 +157,16 @@
 
 					<div class="section">
 						<div class="container">						
+							<div class="eight columns hidden-desktop">
+								<div class="image-container">
+									<img src="public/images/metrix2.png">
+								</div>							
+							</div>
 							<div class="eight columns section-text">
 								<h3>Fuel and Speed Monitoring</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 							</div>
-							<div class="eight columns">
+							<div class="eight columns hidden-mobile">
 								<div class="right image-container">
 									<img src="public/images/metrix2.png">
 								</div>							
@@ -166,12 +186,19 @@
 								<h3>Historical Report</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 							</div>
-						</div>
+						</div>						
 					</div>
+
+					<div class="section">
+						<div class="container sixteen columns "></div>
+						<a href="" class="action">See More</a>
+					</div>				
+					
+					
 				</div>
 		</div>
 
-		<div class="container mentions section" id="end-point">
+		<div class="container mentions section full-container" id="end-point">
 				<h2>Client Kami</h2>
 				<div class="four columns">
 					<img src="public/images/BCA_s.png">
@@ -188,12 +215,12 @@
 			</div>
 
 		<div class="price-section">			
-			<div class="container">
+			<div class="container full-container price-container">
 				<div class="sixteen columns">
 					<h2>Pricing</h2>
 				</div>
 				<div class="pricing container">
-					<div class="pricing-caption five columns">							
+					<div id="pricing-caption" class="pricing-caption five columns">							
 						<span>Dua tipe paket yang dapat dipilih sesuai dengan kebutuhan anda dan bisnis anda</span>
 						<div class="price-action">						
 							<a href="pricing.html" class="action">Lihat Detail</a>
@@ -234,16 +261,18 @@
 
 <!-- End Document
 ================================================== -->
+<script>
+  var navigation = responsiveNav("foo", {customToggle: ".nav-toggle"});
+</script>
+
 </body>
+
 </html>
 
 <script type="text/javascript">
 	$('#end-point').waypoint(function(direction) {
   		$("nav").toggleClass("active");
 	});
-
-
-	// $(window).scroll(function(){
-	// 	$("nav").animate({opacity:0.8});
-	// });
+	
+	
 </script>

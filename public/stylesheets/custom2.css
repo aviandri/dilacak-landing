@@ -36,7 +36,7 @@ h1, h2, h3, h4{
 
 .wrap.active{
 	background-color: #4980a5;
-	opacity: 0.9;
+	
 }
 
 .right{
@@ -60,13 +60,19 @@ nav{
 	
 }
 
-.plain-header .active .logo{
-	margin-top: 15px;
+.logo{
+	margin-left: 1%; 
+}
+
+.plain-header{
+	height: 100px;
+
 }
 
 nav.active{
 	background-color: #4980a5;
-	
+	opacity: 1.0;	
+
 }
 
 .nav{
@@ -79,22 +85,49 @@ nav.active{
 	float:left;
 }
 
+.nav.container{
+	clear: both;
+	max-height: 100px;
+}
+
 .header{	
-	background: url('../images/banner2.png') no-repeat center top;
+	background: url('../images/banner2.png')  no-repeat center top;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 	position: relative;
-	padding: 15px 0;	
-	min-height: 550px;
+	padding: 15px 0;		
+	height: 550px;
+	min-height: 60%;
 	width: 100%;
 	z-index: 2000;	
 	margin-bottom: 2px;
+
 }
 
-.plain-header{
-	position: relative;
+
+
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.nav-collapse li {
+  width: 100%;
+  display: inline;
 }
 
 .nav-menu ul{
 	list-style: none;
+	display: inline;
+}
+
+#foo{
+	display: inline;
 }
 
 .nav-menu li{
@@ -151,11 +184,12 @@ nav.active{
 }
 
 .banner-text{
-	font-size: 3em;
-	line-height: 1.5em;
 	left: 20%;
-	margin-top: 40px;
+	margin-top: 30px;
+	margin-left: 2%;
 }
+
+
 .banner-text small{
 	color: #FFF;
 	font-size: 0.6em
@@ -163,9 +197,16 @@ nav.active{
 
 .banner-text h1{
 	color: #dcd84b;
+	font-size: 3em;
 }
 
+
 .banner-text span{
+	font-weight: 500;
+	font-size: 1.6em;
+}
+.subheading{
+	margin: 30px 0;
 }
 
 .mentions{
@@ -181,7 +222,7 @@ nav.active{
 	display: block;
 	color: #fff;
 	font-size: 0.5em;
-	line-height: 0.6em;
+	line-height: 1.5em;
 }
 
 .banner-button{
@@ -200,9 +241,6 @@ nav.active{
 	border: 1px solid #52afe2;
 }
 
-.main-content{
-	margin-top: 6.5%;
-}
 
 .section-title{
 	margin-bottom: 30px;
@@ -262,6 +300,7 @@ nav.active{
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;	
+	overflow: hidden;
 }
 .section-text{
 }
@@ -285,6 +324,8 @@ nav.active{
 	border-top: 1px solid #eee;
 	margin-top: 30px;
 }
+
+
 .price{
 	background-color: rgb(232, 232, 232);
 	-webkit-border-radius: 7px;
@@ -341,16 +382,25 @@ nav.active{
 	margin-left: 17.5px;
 }
 
-.price-action .action{
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+.action{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.2), 0px 0px 0px 1px rgba(188,188,188,0.1);
+	-moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.2), 0px 0px 0px 1px rgba(188,188,188,0.1);
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.2), 0px 0px 0px 1px rgba(188,188,188,0.1);
 	background-color: #f27366;
 	padding: 20px;
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 600;
 	color: #fff;
 	text-decoration: none;
+	text-align: center;
+	margin-left: 45%;
+}
+
+.action:visited{
+	color: #fff;
 }
 
 .price-action .action:hover{
@@ -660,7 +710,7 @@ nav.active{
 .content-text h2{
 	color: #fff;
 	font-size: 1.5em;	
-	line-height: 1em;
+	line-height: 1.4em;
 }
 
 .content-text span{
@@ -668,7 +718,12 @@ nav.active{
 	line-height: 1.5em;
 }
 
+.content-image img{
+	margin-top: 20px;
+}
+
 .content-image.right img{
+	
 	float: right;
 }
 
@@ -681,4 +736,285 @@ nav.active{
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.plain-section{
+	margin-bottom: 40px;
+}
+
+strong{
+	color: #fff;
+}
+
+.hidden-desktop{
+ 	display: none !important;
+}
+
+.banner-action{
+	margin-top: 150px;
+}
+
+
+@media (max-width: 955px) {
+	.header{
+		background: url('../images/banner2.png')  no-repeat center bottom;
+		background-color: #487fa5;
+		-webkit-background-size: contain;
+  		-moz-background-size: contain;
+  		-o-background-size: contain;
+  		background-size: contain;
+	}
+
+	.image-container img{
+		max-width: 300px;
+	}
+
+}
+
+.section-action{
+	margin-top: 50px;
+}
+
+@media (max-width: 767px){
+	.nav-toggle {
+		-webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    width: 70px;
+	    height: auto;
+	    float: right;
+	    display: inline-block;
+	    margin: 0 -2em 1em 90px;
+	    text-indent: -999px;
+	    overflow: hidden;
+	    background: url('../images/responsive_nav.png')  no-repeat 50% 3%;
+	    z-index: 1000;
+	    opacity: 50%;
+  	}
+
+  	.quote-section .section-text{
+  		left: 50%;
+  		margin: 0 0 0 10%;
+  	}
+
+  	.hidden-mobile{
+ 		display: none !important;
+	}
+
+	.hidden-desktop{
+		display: inherit !important;
+	}
+
+	.image-container{
+		margin: 0 20%;
+	}
+	.section {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 20px;
+	}
+
+	.section-text{
+		padding-left: 10px;
+	}
+
+	p{
+		font-size: 0.9em;
+		line-height: 1.4em;
+	}
+
+	.section.first{
+		padding-top: 30px;
+	}
+
+	.mentions img{
+		margin-bottom: 20px;
+	}
+	.mentions img{
+		max-width: 80%;
+	}
+
+	.container{
+		width: 480px;
+	}
+
+	.subheading{
+		line-height: 1em;
+	}
+	
+	.price-action{
+		margin-bottom: 30px;
+	}
+
+
+	.price{
+		display: block;
+		margin-bottom: 40px  !important;
+	}
+
+	.mentions div img{
+		float: left;
+	}
+
+	.container .four.columns{
+		width: 120px;
+	}
+
+	h2{
+		font-size: 1.8em;
+	}
+
+	h3{
+		font-size: 1.5em;
+	}
+
+	.price-section{
+		padding: 20px 0px 20px 0;
+	}
+
+	.footer{
+		min-height: 100px;
+	}	
+	.banner-text{
+		padding-top: 30px;
+	}
+	.banner-text h1{
+		font-size: 2em;
+	}
+
+	.logo{
+		margin-left: 0; 
+	}
+
+	.pricing-container{
+		left: 50%;
+		margin: 0 0 0 -210px;
+	}
+
+	.pricing .plan{
+		margin-bottom: 40px;
+	}
+
+	.page-title{
+		left: 50%;
+		margin: 0 0 0 60px;
+	}
+
+@media (max-width: 480px){
+	.container.full-container{
+		left: 40%;
+		margin: 0 0 0 -160px;
+	}
+	.container .four.columns{
+		width: 100px;
+	}
+
+	.banner-text span{
+		text-align: center;
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+
+	.banner-text{
+		padding-left: 40px;
+	}
+
+	.banner-text h1{
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	.header{
+		max-height: 450px;
+	}
+
+	.subheading{
+		margin-top: 20px;
+	}
+
+	#banner-action{
+		margin-left: 20px;
+		padding-left: 50px;
+	}
+
+	.section-text{
+		text-align: center;
+	}
+
+	.nav-toggle{
+		float: none;
+		margin: -5px -150px 0 0;
+	}
+
+
+
+
+}
+
+
+@media (max-width: 400px){
+	.image-container{
+		margin: 0 8%;
+	}
+	.logo{
+		left: 50%;
+		margin: 0 0 0 100px;
+	}
+
+	.container.header-content{
+		left: 50%;
+		margin: 0 0 0 -200px;
+	}
+
+	#banner-action{
+		width: 50%;
+		left: 50%;
+		margin: 0 0 0 50px;
+	}
+
+	.container.full-container.mentions {
+		left: 50%;
+		margin: 0 0 0 -160px;
+	}
+	.container.full-container.mentions div{
+		display: block;
+		width: 80%;
+	}
+	.container.full-container.mentions div img{
+		max-width: 250px;
+		max-height: auto;
+	}
+
+	.action{
+		margin-left: 25%;
+	}
+	.section{
+		margin-bottom: 30px;
+	}
+
+	.container.full-container.price-container{
+		left: 50%;
+		margin: 0 0 0 -160px;
+	}
+
+	.quote-section .section-text{
+  		left: 50%;
+  		margin: 0 0 0 0;
+  	}
+
+  	.nav-toggle{
+		float: none;
+		margin: -5px 50px 0 0;
+	}
+
+	.action-section{
+		left: 50%;
+  		margin: 0 0 0 -620px;
+	}
+
+
+
+
 
