@@ -260,18 +260,6 @@ nav.active{
 	margin-bottom: 30px;
 }
 
-[class^="icon-"],
-[class*=" icon-"]{
-	display: inline-block;
-	width: 52px;
-	height: 52px;
-	margin-top: 1px;
-	*margin-right: .3em;
-	line-height: 52px;
-	vertical-align: middle;
-	background-image: url(../images/icons.png);
-	background-repeat: no-repeat;
-}
 
 .sub-title{
 	font-size: 1.2em;
@@ -358,10 +346,6 @@ nav.active{
 	margin-bottom: 30px;
 	text-transform: uppercase;
 	vertical-align: middle;
-}
-
-
-.price{
 }
 
 
@@ -871,6 +855,92 @@ input[type="tel"], input[type="url"]{
 }
 
 
+
+.social{
+   margin:10px 0px;
+}
+
+.social a i{
+   display:inline-block;
+   width:40px;
+   height:40px;
+   font-size:17px !important;
+   line-height:40px;
+   text-decoration:none;
+   text-align:center;
+   color:#fff;
+   -webkit-transition: background 2s ease;
+   -moz-transition: background 2s ease;
+   -o-transition: background 2s ease;
+   -ms-transition: background 2s ease;
+   transition: background 2s ease;
+   border-radius:100px;
+   margin-right:5px;
+}
+.social a.facebook i{
+	background:#1e78ae;
+}
+
+.social a.twitter i{
+	background:#1ba1e2;
+}
+
+.social a.google-plus i{
+	background:#f22d0c;
+}
+
+.social a.pinterest i{
+	background:#dd1617;
+}
+
+.social a.linkedin i{
+	background:#2d93cf;
+}
+
+.fsection{
+	margin-top: 10px;
+}
+
+.fsection p{
+	color: #fff;
+}
+
+.fsection div{
+	margin-top: 10px;
+}
+
+.fsection h4{
+	font-size: 1.5em;
+	color: #eee;
+	font-style: normal;	
+}
+
+.fsection i.contact-icon{
+   background:#0fa6bc;
+   width:20px;
+   height:20px;
+   line-height:20px;
+   text-align:center;
+   display:inline-block;
+   border-radius:100px;
+   color:#fff;
+   font-size:10px;
+   margin-right:7px;
+}
+
+.fsection a, .fsection a:visited, .fsection a:hover{
+	color: #fff;
+}
+.footer .address p{
+	font-size: 0.9em;
+	color: #fff;
+	line-height: 2em;
+	margin-bottom: 5px;
+}
+
+
+
+
 @media (max-width: 955px) {
 	.header{
 		background: url('../images/banner2.png')  no-repeat center bottom;
@@ -888,6 +958,7 @@ input[type="tel"], input[type="url"]{
 	#banner-action{
 		padding-bottom: 40px;
 	}
+
 
 }
 
@@ -932,7 +1003,7 @@ input[type="tel"], input[type="url"]{
 	.four.columns.contact-caption{
 		width: 100% !important;
 	}
-
+	
 
 }
 
