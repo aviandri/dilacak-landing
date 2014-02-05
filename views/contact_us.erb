@@ -1,0 +1,63 @@
+<% content_for :contact_tab do %>
+	 	<%= "current" %>
+<% end %>
+
+<div class="container title">
+	<div class="four columns">
+		<h1>Contact</h1>
+	</div><!-- /span4 -->
+	<div class="twelve columns hidden-mobile alt">	
+		<hr>
+	</div><!-- /span8 -->
+</div><!-- /row-fluid -->
+
+<div class="container contact-section">
+	<div class="four columns contact-caption">
+		<h4 class="intro">Drop me a Line!</h4>
+		<p>Enough about me, let s hear about you. I am currently available for projects starting in July 2013.</p>
+		<div>
+			<h5>Email:</h5>
+			<span>info@itoz-labs.com</span>
+		</div><!-- /row -->
+		<div>
+			<h5>Twitter:</h5>
+			<span><a href="http://www.twitter.com/basicoh_" rel="external">@itoz_labs</a></span>
+		</div>
+	</div>
+
+	<div class="twelve columns">
+
+
+
+		<div class="five columns">
+			<label for="name" class="control-label">Name:</label>
+			<input class="five columns" type="text" name="contact_name" id="name">
+		</div><!-- /span6 -->
+		<div class="five columns">
+			<label for="email" class="control-label">Email:</label>
+			<input class="five columns" type="email" name="contact_email" id="email">
+		</div><!-- /span6 -->
+
+		<div class="five columns">
+			<label for="phone" class="control-label">Phone Number:</label>
+			<input class="five columns" type="tel" name="contact_phone" id="phone">  
+		</div><!-- /span6 -->
+		<div class="five columns">
+			<label for="website" class="control-label">Your Website (Optional):</label>
+			<input class="five columns" type="url" name="contact_website" id="website">
+
+		</div><!-- /span6 -->
+
+		<div class="columns twelve">
+			<label for="message" class="control-label">Your Message:</label>
+			<textarea class="columns twelve" type="text" name="contact_message" id="message" rows="4"></textarea>
+		</div>
+
+		<div class="columns twelve send-message">
+			<a href="/features" class="action right">Send Message</a> 
+		</div>
+		<!-- </form> --><!-- /form -->
+	</div><!-- /span8 -->	
+
+</div><!-- /row-fluid -->	
+</div>

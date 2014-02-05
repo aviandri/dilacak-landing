@@ -1,0 +1,113 @@
+	<% content_for :pricing_tab do %>
+		<%= "current" %>
+	<% end %>
+	
+	<div class="container unit-section">
+		<div class="sixteen columns">
+			<div class="page-title">
+				<h2>GPS Unit</h2>
+				<span>Rp. 2 Jt</span>
+				<span>+</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="container pricing-container">
+		<div class="sixteen columns">
+			<div class="container pricing-content">
+				<div class="pricing">						
+					<div class="plan six columns offset-by-two">
+						<div class="plan-name">
+							<h2>Basic</h2>
+							<span>Rp.100 Rb</span>
+						</div>
+						<ul class="plan-features">
+							<li class="plan-feature">Report 1 bulan terakhir</li>
+							<li class="plan-feature">5 SMS Alert / hari</li>
+							<li class="plan-feature">2 GHz Speed</li>
+							<li class="plan-feature">Unlimited upload</li>
+							<li class="plan-feature">Unlimited download</li>
+							<li class="plan-feature">24hrs support</li>
+						</ul>								
+					</div>
+					<div class="plan six columns">
+						<div class="plan-name">
+							<h2>Pro</h2>
+							<span>Rp. 120 Rb</span>
+						</div>
+						<ul>
+							<li class="plan-feature">Report selamanya</li>
+							<li class="plan-feature">SMS Alert tanpa batas</li>
+							<li class="plan-feature">2 GHz Speed</li>
+							<li class="plan-feature">Unlimited upload</li>
+							<li class="plan-feature">Unlimited download</li>
+							<li class="plan-feature">24hrs support</li>
+						</ul>								
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="action-section">
+			<div>
+				<a href="#inline1" class="a-btn fancybox">
+					<span class="a-btn-text">Daftar Sekarang</span> 
+				</a>					
+			</div>					 
+		</div>
+	</div>		
+
+
+	<div id="inline1" style="width: 400px; display: none;">
+		<form class="pure-form pure-form-stacked register-form">
+		    <fieldset>
+		        <legend>Daftar</legend>
+
+		        <label for="email">Email</label>
+		        <input size="10" id="email" type="email" placeholder="Email">
+
+		        <label for="phone">No Telepon</label>
+		        <input size="10" id="phone" type="text" placeholder="08211111">
+
+		        <label for="phone">Kendaraan Yang Akan Dipasang</label>
+		        <input size="10" id="vehicleno" type="number" placeholder="1">
+
+		        <label for="state">Tipe Paket</label>
+		        <select id="state">
+		            <option>Basic</option>
+		            <option>Pro</option>
+		        </select>
+
+
+		        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+		    </fieldset>
+		</form>
+	</div>
+
+<!-- End Document
+	================================================== -->
+	<script>
+  		navToggle();
+	</script>
+</body>
+</html>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	$(".fancybox").fancybox({
+		maxWidth	: 350,
+		maxHeight	: 400,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
+
