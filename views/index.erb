@@ -20,9 +20,9 @@
   ================================================== -->
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
 
 	<link rel="stylesheet" href="stylesheets/responsive-nav.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
 	<link rel="stylesheet" href="stylesheets/custom2.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Sacramento" type='text/css'>
 	<link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
@@ -53,42 +53,54 @@
 	================================================== -->
 	<div class="wrap">
 		<div class="header">
-			<nav class="">
-				<div class="nav container clearfix full-container">
-						<div class="logo">
-							<img src="images/logo.png"/>
-						</div>		
-						<div class="nav-toggle">
-							<a href="#nav">Menu</a>		
-						</div>
+			<div class="navigator">
+				<nav class="container">
+					<div class="logo columns five">
+						<a>logo</a>
+					</div>		<!-- end three -->
+					<div class="nav-toggle">
+						<a href="#nav">Menu</a>		
+					</div>
 					<div  class="nav-collapse nav-menu">
-						<ul>
-							<li class="current"><a href="/">Home</a></li>
-							<li><a data-target="features" class="link" href="#features">Features</a></li>
-							<li><a data-target="price" class="link" href="#pricing">Pricing</a></li>
-							<li><a href="/contact">Contact Us</a></li>
-							<li><a href="/how_it_works">Cara Kerja</a></li>
-							<li><a href="">About Us</a></li>
-						</ul>
-						<ul class="right">
-							<li><a href="/" class="login-action">Login</a></li>
-						</ul>
+						<div class="columns ten">
+							<ul>
+								<li class="current"><a href="/">Home</a></li>
+								<li><a data-target="features" class="link" href="#features">Features</a></li>
+								<li><a data-target="price" class="link" href="#pricing">Pricing</a></li>
+								<li><a href="/contact">Contact Us</a></li>
+								<li><a href="/how_it_works">Cara Kerja</a></li>
+								<li><a href="">About</a></li>
+							</ul>
+						</div> <!-- end eleven -->
+						<div class="columns one">
+							<ul>
+								<li><a href="http://app.dilacak.com" class="login-action">Login</a></li>
+							</ul>
+						</div> <!-- end two -->
 					</div>		
-				</div>
-			</nav>
+				</nav><!-- end container -->
+			</div>
 
 			<div class="header-content container full-container"> 
-				<div class="banner-text eleven columns">
-					<span class="subheading">Fleet management & GPS tracking</span>		
+				<div class="banner-text twelve columns">
+					<span class="subheading break-word"><p>Fleet management & GPS tracking</p></span>		
 					<h1>Lacak dengan mudah</h1>				
-					<span class="subheading">Tingkatkan efesiensi & keamanan kendaraan anda</span>		
+					<span class="subheading"><p class="break-word">Efesiensi & keamanan kendaraan anda</p></span>		
 				</div>
-				<a href="" class="action two columns banner-action" id="banner-action">Mulai Lacak</a>
+
+				<div class="banner-action four columns">
+						<a href="" class="action">Mulai Lacak</a>
+				</div>
+				
+				
 			</div>
 		</div>
 
 		<div class="container mentions full-container" id="end-point">
-				<h2>Liputan kami</h2>
+				<div class="sixteen columns">
+					<h2>Liputan kami</h2>
+				</div>
+				
 				<div class="four columns">
 					<img src="images/sparxup-2012-logo.png">
 				</div>
@@ -111,99 +123,83 @@
 				</div>						
 			</div>
 		</div>
-		<div class="content container" name="features">
-				<div class="features">
-					<div class="section first">
-						<div class="container">
-							<div class="eight columns">
+
+		<div class="content container features" name="features">
+					<div class="section first sixteen columns">
+							<div class="eight columns alpha">
 								<div class="image-container">
 									<img src="images/chrome.png">
 								</div>							
 							</div>
-							<div class="eight columns section-text">
+							<div class="eight columns section-text omega">
 								<h3>Lacak dari manapun</h3>
 								<p>Lacak dan monitor kendaraan anda dari manapun. Dengan mengunakan Web DILACAK.COM, kapan pun anda hanya berjarak satu klik dari kondisi kendaraan anda. Applikasi iPhone dan Android akan tersedia dalam waktu dekat.</p>
-							</div>
-							
-						</div>
+							</div>							
 					</div>
 
-					<div class="section">
-						<div class="container">
+					<div class="section sixteen columns">
 							<div class="eight columns hidden-desktop">
 								<div class="image-container">
 									<img src="images/time.png">
 								</div>							
 							</div>
-							<div class="eight columns section-text">
+
+							<div class="eight columns section-text alpha">
 								<h3>Real Time Tracking</h3>
 								<p>Memantau posisi dan kondisi kendaraan di manapun secara realtime melalui Web Dilacak.com atau service SMS (Applikasi Mobile untuk Android dan iPhone akan tersedia dalam waktu dekat). Frekuensi pelacakan DILACAK.COM adalah yang terbaik, di mana status kendaraan diupdate per <strong>5 detik</strong>.</p>
 							</div>
-							<div class="eight columns hidden-mobile">
+
+							<div class="eight columns hidden-mobile omega">
 								<div class="right image-container">
 									<img src="images/time.png">
 								</div>							
 							</div>
-						</div>
 					</div>
-					<div class="section">
-						<div class="container">						
-							<div class="eight columns">
+					<div class="section sixteen columns">					
+							<div class="eight columns alpha">
 								<div class="image-container">
 									<img src="images/engine2.png">
 								</div>							
 							</div>
-							<div class="eight columns section-text">
+							<div class="eight columns section-text omega">
 								<h3>Cut off engine</h3>
 								<p>Dalam menghadapi kondisi darurat, pengguna dapat mematikan kendaraan secara remote, melalui SMS atau Web DILACAK.COM. Kendaraan yang telah di "Cut Off", tidak dapat dihidupkan sebelum ada perintah dari pengguna untuk menghidupkan kembali kendaraan.</p>
 							</div>
-						</div>
 					</div>
 
-					<div class="section">
-						<div class="container">						
+					<div class="section sixteen columns">					
 							<div class="eight columns hidden-desktop">
 								<div class="image-container">
 									<img src="images/metrix2.png">
 								</div>							
 							</div>
-							<div class="eight columns section-text">
+							<div class="eight columns section-text alpha">
 								<h3>Fuel and Speed Monitoring</h3>
 								<p>Pengguna dapan memonitor kondisi bensin dan kecepatan kendaraan dari Web DILACAK.COM ataupun melalui notifikasi SMS. Pengguna juga dapat menentukan batas kecepatan maksimum untuk tiap kendaraan. Jika kendaraan melewati batas kecepatan yang telah ditentukan, alert akan muncul di Web DILACAK.COM dan notifikasi sms akan dikirimkan.</p>
 							</div>
-							<div class="eight columns hidden-mobile">
+							<div class="eight columns hidden-mobile omega">
 								<div class="right image-container">
 									<img src="images/metrix2.png">
 								</div>							
-							</div>
-							
-						</div>
+							</div>						
 					</div>
 
-					<div class="section">
-						<div class="container">						
-							<div class="eight columns">
+					<div class="section sixteen columns">					
+							<div class="eight columns alpha">
 								<div class="image-container">
 									<img src="images/report2.png">
 								</div>							
 							</div>
-							<div class="eight columns section-text">
+							<div class="eight columns section-text omega">
 								<h3>Historical Report</h3>
 								<p>Status kendaraan dan rute yang telah ditempuh akan dicatat oleh service kami. Catatan report ini dapat dengan mudah dilihat di Web DILACAK.com. Melalui report ini, pengguna dapat dengan mudah menganalisa kinerja kendaraan.</p>
 							</div>
-						</div>						
 					</div>
 
-					<div class="section">
-						<div class="container"></div>
-						<div class="action-container"> 
-							<a href="/features" class="action center">See More</a> 
-						</div>
-						
+					<div class="section sixteen columns">
+						<a href="/features" class="action center">See More</a> 						
 					</div>				
-					
-					
-				</div>
+									
 		</div>
 
 		<div class="container mentions section full-container" id="end-point">
@@ -282,11 +278,11 @@
 			<div class="column one-third fsection">
 				<h4>Contact</h4>
 				<div class="address">
-                  <p><i class="	fa fa-home color contact-icon"></i> #12, Plot No.14, Raj Karmara Street, </p>
-                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5th Stage, Koramangala, Madiwala,</p>
-                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bangalore - 493922, Karananana.</p>
-                  <p><i class="fa fa-phone color contact-icon"></i> +94-948-323-5532</p>
-                  <p><i class="fa fa-envelope color contact-icon"></i> <a href="mailto:something@gmail.com">some.thing@gmail.com</a></p>
+                  <p><i class="	fa fa-home color contact-icon"></i> Ruko Golden Blok G no 51 </p>
+                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Summarecon Serpong</p>
+                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tanggerang.</p>
+                  <p><i class="fa fa-phone color contact-icon"></i> 021-29419092 / 021-29419093 </p>
+                  <p><i class="fa fa-envelope color contact-icon"></i> <a href="mailto:something@gmail.com">cs@dilacak.com</a></p>
                </div>				
 			</div>			
 
@@ -306,7 +302,7 @@
 
 <script type="text/javascript">
 	$('#end-point').waypoint(function(direction) {
-  		$("nav").toggleClass("active");
+  		$(".navigator").toggleClass("active");
 	});
 
 	$(".link").click(function() {

@@ -19,11 +19,13 @@
 	================================================== -->
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
+
 	<link rel="stylesheet" href="stylesheets/responsive-nav.css">
+
 	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="stylesheets/layout.css">
 	<link rel="stylesheet" href="stylesheets/custom2.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Sacramento" type="text/css">
 	<link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
@@ -55,29 +57,33 @@
 <body>
 	<div class="wrap active">
 		<div class="plain-header">
-			<nav class="active">
-				<div class="nav container clearfix">
-					<div class="logo">
-						<img src="images/logo.png"/>
-					</div>
-					<div class="nav-toggle">
-						<a href="#nav">Menu</a>		
-					</div>
-					<div class="nav-collapse nav-menu">
-						<ul>
-							<li name="home" class="<%= yield_content :home_tab %>"><a href="/">Home</a></li>
-							<li name="features" class="<%= yield_content :features_tab %>"><a href="/features">Features</a></li>
-							<li name="pricing" class="<%= yield_content :pricing_tab %>"><a href="/pricing">Pricing</a></li>
-							<li name="contact" class="<%= yield_content :contact_tab %>"><a href="/contact">Contact Us</a></li>
-							<li name="how_it_works" class="<%= yield_content :how_it_works_tab %>"><a href="/how_it_works">Cara Kerja</a></li>
-							<li name="about" class="<%= yield_content :about_tab %>"><a href="">About Us</a></li>
-						</ul>
-						<ul class="right">
-							<li><a href="/">Login</a></li>
-						</ul>
-					</div>				
-				</div>
-			</nav>
+			<div class="navigator active">
+				<nav class="active container">
+						<div class="logo columns five">
+							<a href="">Logo</a>
+						</div><!-- end three -->
+						<div class="nav-toggle">
+							<a href="#nav">Menu</a>		
+						</div>
+						<div class="nav-collapse nav-menu">
+							<div class="columns ten">
+								<ul>
+									<li name="home" class="<%= yield_content :home_tab %>"><a href="/">Home</a></li>
+									<li name="features" class="<%= yield_content :features_tab %>"><a href="/features">Features</a></li>
+									<li name="pricing" class="<%= yield_content :pricing_tab %>"><a href="/pricing">Pricing</a></li>
+									<li name="contact" class="<%= yield_content :contact_tab %>"><a href="/contact">Contact Us</a></li>
+									<li name="how_it_works" class="<%= yield_content :how_it_works_tab %>"><a href="/how_it_works">Cara Kerja</a></li>
+									<li name="about" class="<%= yield_content :about_tab %>"><a href="">About Us</a></li>
+								</ul>
+							</div> <!-- end eleven -->
+							<div class="columns one">
+								<ul class="right">
+									<li><a href="http://app.dilacak.com" class="login-action">Login</a></li>
+								</ul>
+							</div> <!-- end two -->
+						</div>				
+				</nav>
+			</div>
 		</div>
 
 		<div class="container main-content" name="features">
@@ -107,11 +113,11 @@
 			<div class="column one-third fsection">
 				<h4>Contact</h4>
 				<div class="address">
-                  <p><i class="	fa fa-home color contact-icon"></i> #12, Plot No.14, Raj Karmara Street, </p>
-                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5th Stage, Koramangala, Madiwala,</p>
-                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bangalore - 493922, Karananana.</p>
-                  <p><i class="fa fa-phone color contact-icon"></i> +94-948-323-5532</p>
-                  <p><i class="fa fa-envelope color contact-icon"></i> <a href="mailto:something@gmail.com">some.thing@gmail.com</a></p>
+                  <p><i class="	fa fa-home color contact-icon"></i> Ruko Golden Blok G no 51 </p>
+                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Summarecon Serpong</p>
+                  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tanggerang.</p>
+                  <p><i class="fa fa-phone color contact-icon"></i> 021-29419092 / 021-29419093 </p>
+                  <p><i class="fa fa-envelope color contact-icon"></i> <a href="mailto:something@gmail.com">cs@dilacak.com</a></p>
                </div>				
 			</div>			
 

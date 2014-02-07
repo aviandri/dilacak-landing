@@ -4,13 +4,13 @@ function navToggle (argument) {
 	animate: true,        // Boolean: Use CSS3 transitions, true or false
 	transition: 50,      // Integer: Speed of the transition, in milliseconds
 	open: function(){
-		$("nav").css("background-color", "#333");
+		$(".navigator").css("background-color", "#333");
 	}, 
 	close: function(){
-		if($('body').find('nav.active').length = 1){
-			$("nav").css("background-color", "#4980a5");
+		if($('body').find('.navigator.active').length = 1){
+			$(".navigator").css("background-color", "#4980a5");
 		} else{
-			$("nav").css("background-color", "transparant");
+			$(".navigator").css("background-color", "transparant");
 		}
 	}
 	});
