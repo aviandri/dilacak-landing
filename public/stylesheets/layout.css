@@ -85,7 +85,7 @@
 .navigator{
 	position: fixed;
 	min-width: 100%;
-	padding: 10px 0;
+	padding: 10px 0 0 0;
 	text-align: center;
 	top: 0;	
 	z-index: 1000;
@@ -1078,6 +1078,11 @@ input[type="tel"], input[type="url"]{
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+
+/*	.navigator {
+		padding: 10px 0 0 0 !important;
+	}*/
+
 	.hidden-mobile{
 		display: none !important;
 	}
@@ -1386,7 +1391,7 @@ input[type="tel"], input[type="url"]{
 @media only screen and (max-width: 360px) {
 
 	.header {
-		height: 400px;
+		height: 450px;
 	}
 
 	.action{
