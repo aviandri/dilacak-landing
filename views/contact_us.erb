@@ -1,10 +1,10 @@
 <% content_for :contact_tab do %>
-	 	<%= "current" %>
+<%= "current" %>
 <% end %>
 
 <div class="container title">
 	<div class="four columns">
-		<h1>Contact</h1>
+		<h2>Contact</h2>
 	</div><!-- /span4 -->
 	<div class="twelve columns hidden-mobile alt">	
 		<hr>
@@ -28,36 +28,39 @@
 	<div class="twelve columns">
 
 
+		<form id="message-form" action="send_message" method="post">
+			<div class="five columns">
+				<label for="name" class="control-label">Name:</label>
+				<input class="five columns" type="text" name="name" id="name">
+			</div><!-- /span6 -->
+			<div class="five columns">
+				<label for="email" class="control-label">Email:</label>
+				<input class="five columns" type="email" name="email" id="email">
+			</div><!-- /span6 -->
 
-		<div class="five columns">
-			<label for="name" class="control-label">Name:</label>
-			<input class="five columns" type="text" name="contact_name" id="name">
-		</div><!-- /span6 -->
-		<div class="five columns">
-			<label for="email" class="control-label">Email:</label>
-			<input class="five columns" type="email" name="contact_email" id="email">
-		</div><!-- /span6 -->
+			<div class="five columns">
+				<label for="phone" class="control-label">Phone Number:</label>
+				<input class="five columns" type="tel" name="phone" id="phone">  
+			</div><!-- /span6 -->
+			<div class="five columns">
+				<label for="website" class="control-label">Your Website (Optional):</label>
+				<input class="five columns" type="url" name="website" id="website">
 
-		<div class="five columns">
-			<label for="phone" class="control-label">Phone Number:</label>
-			<input class="five columns" type="tel" name="contact_phone" id="phone">  
-		</div><!-- /span6 -->
-		<div class="five columns">
-			<label for="website" class="control-label">Your Website (Optional):</label>
-			<input class="five columns" type="url" name="contact_website" id="website">
+			</div><!-- /span6 -->
 
-		</div><!-- /span6 -->
+			<div class="columns twelve">
+				<label for="message" class="control-label">Your Message:</label>
+				<textarea class="columns twelve" type="text" name="message" id="message" rows="4"></textarea>
+			</div>
 
-		<div class="columns twelve">
-			<label for="message" class="control-label">Your Message:</label>
-			<textarea class="columns twelve" type="text" name="contact_message" id="message" rows="4"></textarea>
-		</div>
-
-		<div class="columns twelve">
-			<a href="/features" class="action">Send Message</a> 
-		</div>
+			<div class="columns twelve">
+				<a href="#" class="action send-message">Send Message</a> 
+			</div>
+		</form>
 		<!-- </form> --><!-- /form -->
 	</div><!-- /span8 -->	
 
 </div><!-- /row-fluid -->	
-</div>
+
+
+

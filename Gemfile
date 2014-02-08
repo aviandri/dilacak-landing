@@ -4,3 +4,5 @@ gem 'sinatra-contrib'
 gem 'pony'
 gem 'thin'
 gem 'newrelic_rpm'
+
+gem 'pry'

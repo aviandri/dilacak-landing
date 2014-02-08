@@ -1,79 +1,123 @@
 
-<div class="container unit-section">
+<div class="unit-section">
 	<div class="sixteen columns">
 		<div class="page-title">
-			<h2>How it Works</h2>
+			<h2>Order</h2>
 		</div>
 	</div>
 </div>
 
-<div class="container">
-	<div class="sixteen columns">
-		<div class="container">
-			<div class="plan-section sixteen columns">						
-				<div class="title">
-					<h2>1. Pilih Paket</h2>
-				</div>
-				<div class="container">
-					<div class="offset-by-one seven columns">
-						<div class="price">
-							<h3>Basic</h3>
-							<div class="amount">
-								<small class="currency">Rp</small>
-								<span class="number">100 Rb</span>
-							</div>
-							<div class="subsection">
-								<span class="duration">/ Bulan</span>
-							</div>						
-						</div>
-					</div>
-					<div class="offset-by-one seven columns">
-						<div class="price">
-							<h3>Pro</h3>
-							<div class="amount">
-								<small class="currency">Rp</small>
-								<span class="number">120 Rb</span>
-							</div>
-							<div class="subsection">
-								<span class="duration">/ Bulan</span>
-							</div>						
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="plan-section sixteen columns">						
-				<div class="title">
-					<h2>2. Kontak kami</h2>
-				</div>								
-				<div class="step-content">
-					<p>Berikan alamat email atau nomor telepon anda, agar team marketing kamu bisa membantu anda mulai melacak</p>
-				</div>
-				<div class="action-section">
-					<a href="#" class="a-btn">
-						<p class="a-btn-text">Kontak Kami</p> 
-					</a> 
-				</div>
+<div class="sixteen columns">
+	<div class="container">
+		<div class="plan-section sixteen columns">						
+			<div class="title">
+				<h2>1. Pilih Paket</h2>
 			</div>
-			<div class="plan-section sixteen columns">						
-				<div class="title">
-					<h2>3. Installasi</h2>
-				</div>
-				<div class="step-content">
-					<img src="images/banner-trans.png">
-					<p>Berikan alamat email atau nomor telepon anda, agar team marketing kamu bisa membantu anda mulai melacak</p>
-				</div>
-			</div>
-			<div class="plan-section sixteen columns">						
-				<div class="title">
-					<h2>4. Mulai lacak</h2>
-				</div>
-				<div class="step-content">									
-					<img src="images/macbookair.png">
-					<p>Berikan alamat email atau nomor telepon anda, agar team marketing kamu bisa membantu anda mulai melacak</p>
+			<div class="">
+				<div class="offset-by-one seven columns">
+					<div class="price">
+						<h3>Basic</h3>
+						<div class="amount">
+							<small class="currency">Rp</small>
+							<span class="number">100 Rb</span>
+						</div>
+						<div class="subsection">
+							<span class="duration">/ Bulan</span>
+						</div>						
 					</div>
 				</div>
+				<div class="offset-by-one seven columns">
+					<div class="price">
+						<h3>Pro</h3>
+						<div class="amount">
+							<small class="currency">Rp</small>
+							<span class="number">120 Rb</span>
+						</div>
+						<div class="subsection">
+							<span class="duration">/ Bulan</span>
+						</div>						
+					</div>
+				</div>
+			</div>
+			<div class="section sixteen columns">
+				<a href="/pricing" target="_blank" class="action center">Detail Paket</a> 						
+			</div>				
+
+		</div>
+
+		<div class="plan-section sixteen columns">						
+			<div class="title">
+				<h2>2. Kontak kami</h2>
+			</div>								
+			<div class="step-content">
+				<p>Berikan alamat email atau nomor telepon anda, agar team marketing kami bisa menghubungi anda.</p>
+			</div>
+			<div class="section sixteen columns">
+				<a href="#inline1" class="action center fancybox">Kontak</a> 						
+			</div>				
+		</div>
+		<div class="plan-section sixteen columns">						
+			<div class="title">
+				<h2>3. Installasi</h2>
+			</div>
+			<div class="step-content">
+				<img src="images/banner-trans.png">
+				<p>Teknisi kami akan melakukan proses installasi unit tracker di kendaraan anda.</p>
+			</div>
+		</div>
+		<div class="plan-section sixteen columns">						
+			<div class="title">
+				<h2>4. Mulai lacak</h2>
+			</div>
+			<div class="step-content">									
+				<img src="images/macbookair.png">
+				<p>Mulailah melacak :)</p>
 			</div>
 		</div>
 	</div>
-	
+</div>
+
+<div id="inline1" style="display: none;">
+		<form class="pure-form pure-form-stacked register-form">
+		    <fieldset>
+		    	<label for="email">Nama / Nama Perushaan</label>
+		        <input size="10" id="name"  placeholder="Nama">
+		        <label for="email">Email</label>
+		        <input size="10" id="email" type="email" placeholder="Email">
+
+		        <label for="phone">No Telepon</label>
+		        <input size="10" id="phone" type="text" placeholder="08211111">
+
+		        <label for="phone">Jumlah unit yang akan dipesan</label>
+		        <input size="10" id="vehicleno" type="number" placeholder="1">
+
+		        <label for="state">Tipe Paket</label>
+		        <select id="state">
+		            <option>Basic</option>
+		            <option>Pro</option>
+		        </select>
+
+
+	        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+	    </fieldset>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	$(".fancybox").fancybox({
+		maxWidth	: 300,
+		maxHeight	: 400,
+		fitToView	: true,
+		width		: '100%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
+

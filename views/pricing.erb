@@ -55,18 +55,18 @@
 	</div>					 
 
 
-	<div id="inline1" style="width: 400px; display: none;">
+	<div id="inline1" style="display: none;">
 		<form class="pure-form pure-form-stacked register-form">
 		    <fieldset>
-		        <legend>Daftar</legend>
-
+		    	<label for="email">Nama / Nama Perushaan</label>
+		        <input size="10" id="name"  placeholder="Nama">
 		        <label for="email">Email</label>
 		        <input size="10" id="email" type="email" placeholder="Email">
 
 		        <label for="phone">No Telepon</label>
 		        <input size="10" id="phone" type="text" placeholder="08211111">
 
-		        <label for="phone">Kendaraan Yang Akan Dipasang</label>
+		        <label for="phone">Jumlah unit yang akan dipesan</label>
 		        <input size="10" id="vehicleno" type="number" placeholder="1">
 
 		        <label for="state">Tipe Paket</label>
@@ -93,10 +93,10 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 	$(".fancybox").fancybox({
-		maxWidth	: 350,
+		maxWidth	: 300,
 		maxHeight	: 400,
-		fitToView	: false,
-		width		: '70%',
+		fitToView	: true,
+		width		: '100%',
 		height		: '70%',
 		autoSize	: false,
 		closeClick	: false,

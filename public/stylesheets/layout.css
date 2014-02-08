@@ -51,7 +51,7 @@
 		h5 { font-size: 17px; line-height: 21px; }
 
 		p { margin: 0 0 21px 0; }
-		p.lead { line-height: 28px;}
+		p.lead { line-height: 28px; word-wrap: break-word;}
 
 
 
@@ -729,7 +729,7 @@ nav{
 
 .pure-form.register-form input, .pure-form.register-form select option{
 	margin-bottom: 10px;
-	width: 300px;
+	width: 100%;
 	line-height: 2em;
 }
 
@@ -784,16 +784,14 @@ nav{
 	display: none !important;
 }
 
-
-
 .section-action{
 	margin-top: 50px;
 }
 
 .title{
 }
-.title h1{
-	font-size: 4em;
+.title h2{
+	font-size: 2.5em;
 	font-weight: 600;
 	color: #f27366;
 	text-rendering: optimizelegibility;
@@ -806,7 +804,7 @@ nav{
 	border-top: 1px solid #eeeeee;
 	border-bottom: 1px solid #ffffff;
 	border-width: 1px 0 0;
-	margin-top: 60px;
+	margin-top: 30px;
 	width: 100%;
 }
 
@@ -951,6 +949,66 @@ input[type="tel"], input[type="url"]{
 	word-wrap: break-word;
 	word-break: break-all;
 }
+
+.about-section p, .about-section strong, .about-section a{
+	color: #fff;
+}
+
+
+
+.statusbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 2000;
+	margin-bottom: 0;
+}
+.statusbar .content {
+	padding: 20px 0;
+	font-size: 24px;
+}
+.success {
+	background-color: #dff0d8;
+	color: #468847;
+}
+.notice {
+	background-color: #fcf8e3;
+	color: #c09853
+}
+.error {
+	background-color: #f2dede;
+	color: #b94a48;
+}
+.info {
+	background-color: #d9edf7;
+	color: #3a87ad;	
+}
+.statusbar .close {
+	font-size: 28px;
+}
+
+.close {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+
+
 
 /* #Page Styles
 ================================================== */
@@ -1247,7 +1305,7 @@ input[type="tel"], input[type="url"]{
 	}
 
 	.header{
-		max-height: 450px;
+		max-height: 550px;
 	}
 
 
@@ -1341,6 +1399,17 @@ input[type="tel"], input[type="url"]{
 		display: block;
 		margin: 0 5px;
 	}	
+	.container{
+		margin: 0 5px;
+	}
+
+	p{
+		margin: 0 25px 5px 0px;
+	}
+
+	.image-container img{
+		max-width: 250px;
+	}
 
 }
 
