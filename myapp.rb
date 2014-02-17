@@ -54,18 +54,17 @@ end
 
 
 post '/send_message' do
-	Pony.mail :to => "aviandri@dilacak.com",
+	Pony.mail :to => "hana@dilacak.com",
             :from => params[:email],
             :subject => "New Message from, #{params[:name]}!",
             :body => erb(:message_template, :layout => false)
-
 end
 
 
 post '/send_order' do
 	Pony.mail :to => "aviandri@dilacak.com",
             :from => params[:email],
-            :subject => "New Message from, #{params[:name]}!",
+            :subject => "Order Message from, #{params[:name]}!",
             :body => erb(:message_template, :layout => false)
 
     redirect '/contact' 
