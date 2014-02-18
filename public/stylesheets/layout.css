@@ -976,6 +976,7 @@ input[type="tel"], input[type="url"]{
 	background-color: #fcf8e3;
 	color: #c09853
 }
+
 .error {
 	background-color: #f2dede;
 	color: #b94a48;
@@ -1007,7 +1008,22 @@ input[type="tel"], input[type="url"]{
   filter: alpha(opacity=40);
 }
 
+ 
+form.async-form input.error, form.async-form textarea.error{
+	border: 1px solid #FF0000;	
+}
 
+form input.error {
+	background-color: #f2dede;
+}
+
+form .form-message.success{
+	color: blue;
+}
+ 
+form .form-message.error{
+	color: red;
+}
 
 
 /* #Page Styles
@@ -1404,9 +1420,6 @@ input[type="tel"], input[type="url"]{
 		display: block;
 		margin: 0 5px;
 	}	
-	.container{
-		margin: 0 5px;
-	}
 
 	p{
 		margin: 0 25px 5px 0px;

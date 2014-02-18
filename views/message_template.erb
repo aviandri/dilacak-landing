@@ -3,11 +3,22 @@ Message from <%= params[:name] %>,
 Message content :
 <%= params[:message] %>
 
-Contact
 
 Email : <%= params[:email] %>
+
 Phone number : <%= params[:phone] %>
-Website : <%= params[:website] %>
+
+<% if params[:website] %>
+	Website : <%= params[:website] %>
+<% end %>
+
+<% if params[:unit_ordered] %>
+	Jumlah unit yg dipesan <%= params[:unit_ordered] %>
+<% end %>
+
+<% if params[:package_type] %>
+	Tipe paket <%= params[:unit_ordered] %>
+<% end %>
 
 
 

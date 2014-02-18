@@ -13,7 +13,7 @@ function navToggle (argument) {
 			$(".navigator").css("background-color", "transparant");
 		}
 	}
-});
+	});
 }
 
 
@@ -24,26 +24,27 @@ function scrollToAnchor(aid){
 
 
 $(document).ready(function() {				
-	$(".send-message").click(sendEmail);				
-
+	$(".send-message").click(contactUs);				
+	$(document).on('click', '.send-order', function(){
+		order();
+	});
 	$(document).on('click', '.close', function(){
 		$(".statusbar .container .content").remove();
 	});
+}
+);
 
-});
 
-function sendEmail(){
-	var email = $("#email").val();
-	var name = $("#name").val();
-	var message = $("#message").val();
-	var phone = $("#phone").val();
-	var website = $("#website").val();
-	var data = {'email' : email, 'name' : name, 'message' : message, 'website': website, 'phone': phone }
+function contactUs(){
+	var data = getFormData();
+	if(!($(".statusbar .container .content").length == 0)){
+		$(".statusbar .container .content").remove();
+	}
 
-	var text = "";
-	var sevirity = "";
-	if(validateForm(phone, email) == false){
-		text = "Oooops, you forgot to fill in some fields";
+	$(".statusbar .container .content").remove();
+	
+	if(getErrorFlag(data) == true){
+		text = "Ooop, ada value yang tidak valid. Mohon perbaiki isi form.";
 		sevirity = "error";
 	}else{
 		text = "We got your message!";
@@ -65,19 +66,70 @@ function sendEmail(){
 	statusBarContentDiv.append(contentDiv);
 }
 
-function validateForm (phone, email) {
-	if(isValidEmail(email) == true && isValidPhone(phone) == true){
-		return true
-	}else{
-		return false;
+function getErrorFlag(data){
+	var errorMap = validateForm(data["phone"], data["email"], data["name"], data["message"]);	
+	var errorFlag = false;
+
+	for (var key in errorMap) {	
+		if(errorMap[key] != true){
+			$("#"+key).addClass("error");
+			errorFlag = true;
+		}
 	}
+	return errorFlag;
+}
+
+function order(){
+	var data = getFormData();
+	if(getErrorFlag(data) == true){
+		$(".form-message").text("Ooop, ada value yang tidak valid. Mohon perbaiki isi form.");
+		$(".form-message").addClass("error");
+	}else{		
+		$.ajax({url: '/send_message', type: 'POST', data: data, success: callback});
+		$(".form-message").text("Terima kasih atas order anda, kami akan menghubungi dalam waktu dekat.");
+		$(".form-message").addClass("success");
+		clearForm();	
+	}
+}
+
+function getFormData(){
+	var emailValue = $("#email").val();
+	var nameValue = $("#name").val();
+	var messageValue = $("#message").val();
+	var phoneValue = $("#phone").val();
+	var websiteValue = $("#website").val();
+	var unit_orderedValue = $("#unit_ordered").val();
+	var package_typeValue = $("#package_type").val();
+
+	var data = {'email' : emailValue, 'name' : nameValue, 'message' : messageValue, 'website': websiteValue, 'phone': phoneValue, "unit_ordered": unit_orderedValue, "package_type": package_typeValue }
+	return data;
+}
+
+
+function sendEmail(){
+	
+
+	
+}
+
+
+function sendOrder(){
+	
+} 
+
+function validateForm (phone, email, name, message) {
+	var errorMap = new Object();
+	errorMap["email"] = isValidEmail(email);
+	errorMap["phone"] = isValidPhone(phone);
+	errorMap["name"] = !isEmpty(name);
+	
+	return errorMap;
 }
 
 
 
 function isValidEmail(email){
 	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	console.log("email:" + filter.test(email));
 	if (filter.test(email)) {
   		return true;
 	}
@@ -88,8 +140,7 @@ function isValidEmail(email){
 
 
 function isValidPhone(phone) {
-  var filter = /^\d+$/;
-  console.log("phone:" + filter.test(phone));
+  var filter = /^\+?([\d-])+$/;
   if(filter.test(phone)){
   	return true
   }else{
@@ -99,15 +150,24 @@ function isValidPhone(phone) {
 
 
 function clearForm(){
-	name = $("#name").val("");
-	email = $("#email").val("");
-	phone = $("#phone").val("");
-	message = $("#message").val("");
-	message = $("#website").val("");
+	$("#name").val("");
+	$("#name").removeClass("error");
+	$("#email").val("");
+	$("#email").removeClass("error");
+	$("#phone").val("");
+	$("#phone").removeClass("error");
+	$("#message").val("");
+	$("#message").removeClass("error");
+	$("#website").val("");
+	$("#website").removeClass("error");
+	$("#unit_ordered").val("");
+
+	if($(".form-message").length > 0){
+		$(".form-message").removeClass("error");
+	}
 }
 
-function empty(value){
-	console.log(value);
+function isEmpty(value){
 	if(value == "" || value == null){
 		return true;
 	}

@@ -26,20 +26,18 @@
 	</div>
 
 	<div class="twelve columns">
-
-
-		<form id="message-form" action="send_message" method="post">
+		<form id="message-form" class="async-form" action="send_message" method="post">
 			<div class="five columns">
-				<label for="name" class="control-label">Name:</label>
+				<label for="name" class="control-label">Name*:</label>
 				<input class="five columns" type="text" name="name" id="name">
 			</div><!-- /span6 -->
 			<div class="five columns">
-				<label for="email" class="control-label">Email:</label>
+				<label for="email" class="control-label">Email*:</label>
 				<input class="five columns" type="email" name="email" id="email">
 			</div><!-- /span6 -->
 
 			<div class="five columns">
-				<label for="phone" class="control-label">Phone Number:</label>
+				<label for="phone" class="control-label">Phone Number*:</label>
 				<input class="five columns" type="tel" name="phone" id="phone">  
 			</div><!-- /span6 -->
 			<div class="five columns">
@@ -49,8 +47,11 @@
 			</div><!-- /span6 -->
 
 			<div class="columns twelve">
-				<label for="message" class="control-label">Your Message:</label>
+				<label for="message" class="control-label">Your Message*:</label>
 				<textarea class="columns twelve" type="text" name="message" id="message" rows="4"></textarea>
+			</div>
+			<div class="columns twelve">
+				<strong><p>* = required</p></strong>
 			</div>
 
 			<div class="columns twelve">

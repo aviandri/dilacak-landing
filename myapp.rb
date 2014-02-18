@@ -11,8 +11,8 @@ configure :development do
 	    :address              => 'smtp.gmail.com',
 	    :port                 => '587',
 	    :enable_starttls_auto => true,
-	    :user_name            => '',
-	    :password             => '',
+	    :user_name            => 'aviandri',
+	    :password             => 'skYw4lk#r',
 	    :authentication       => :plain, 
 	    :domain               => "" 
   	}
@@ -54,7 +54,7 @@ end
 
 
 post '/send_message' do
-	Pony.mail :to => "hana@dilacak.com",
+	Pony.mail :to => "aviandri@dilacak.com",
             :from => params[:email],
             :subject => "New Message from, #{params[:name]}!",
             :body => erb(:message_template, :layout => false)
